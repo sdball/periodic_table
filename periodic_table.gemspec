@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = PeriodicTable::VERSION
   s.authors     = ["Stephen Ball"]
   s.email       = ["sdball@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/sdball/periodic_table"
   s.summary     = %q{Provide periodic table data.}
   s.description = %q{Provide data on elements in the periodic table.}
 

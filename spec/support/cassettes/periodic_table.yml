@@ -1,0 +1,258 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.webservicex.net:80/periodictable.asmx?WSDL
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private, max-age=0
+      content-length:
+      - '15756'
+      content-type:
+      - text/xml; charset=utf-8
+      server:
+      - Microsoft-IIS/7.0
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      date:
+      - Thu, 01 Mar 2012 00:29:10 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+      xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\"
+      xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://www.webserviceX.NET\"
+      xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+      xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http://www.webserviceX.NET\"
+      xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema
+      elementFormDefault=\"qualified\" targetNamespace=\"http://www.webserviceX.NET\">\r\n
+      \     <s:element name=\"GetAtoms\">\r\n        <s:complexType />\r\n      </s:element>\r\n
+      \     <s:element name=\"GetAtomsResponse\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+      \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAtomsResult\"
+      type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+      \     </s:element>\r\n      <s:element name=\"GetAtomicWeight\">\r\n        <s:complexType>\r\n
+      \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+      name=\"ElementName\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+      \     </s:element>\r\n      <s:element name=\"GetAtomicWeightResponse\">\r\n
+      \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+      minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAtomicWeightResult\" type=\"s:string\"
+      />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+      \     <s:element name=\"GetAtomicNumber\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+      \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ElementName\"
+      type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+      \     </s:element>\r\n      <s:element name=\"GetAtomicNumberResponse\">\r\n
+      \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+      minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAtomicNumberResult\" type=\"s:string\"
+      />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+      \     <s:element name=\"GetElementSymbol\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+      \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ElementName\"
+      type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+      \     </s:element>\r\n      <s:element name=\"GetElementSymbolResponse\">\r\n
+      \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+      minOccurs=\"0\" maxOccurs=\"1\" name=\"GetElementSymbolResult\" type=\"s:string\"
+      />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+      \     <s:element name=\"string\" nillable=\"true\" type=\"s:string\" />\r\n
+      \   </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"GetAtomsSoapIn\">\r\n
+      \   <wsdl:part name=\"parameters\" element=\"tns:GetAtoms\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomsSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+      element=\"tns:GetAtomsResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+      name=\"GetAtomicWeightSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:GetAtomicWeight\"
+      />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicWeightSoapOut\">\r\n
+      \   <wsdl:part name=\"parameters\" element=\"tns:GetAtomicWeightResponse\" />\r\n
+      \ </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicNumberSoapIn\">\r\n    <wsdl:part
+      name=\"parameters\" element=\"tns:GetAtomicNumber\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomicNumberSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+      element=\"tns:GetAtomicNumberResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+      name=\"GetElementSymbolSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:GetElementSymbol\"
+      />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetElementSymbolSoapOut\">\r\n
+      \   <wsdl:part name=\"parameters\" element=\"tns:GetElementSymbolResponse\"
+      />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomsHttpGetIn\" />\r\n
+      \ <wsdl:message name=\"GetAtomsHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicWeightHttpGetIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomicWeightHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicNumberHttpGetIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomicNumberHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetElementSymbolHttpGetIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetElementSymbolHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomsHttpPostIn\"
+      />\r\n  <wsdl:message name=\"GetAtomsHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicWeightHttpPostIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomicWeightHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAtomicNumberHttpPostIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetAtomicNumberHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetElementSymbolHttpPostIn\">\r\n
+      \   <wsdl:part name=\"ElementName\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+      \ <wsdl:message name=\"GetElementSymbolHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+      element=\"tns:string\" />\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"periodictableSoap\">\r\n
+      \   <wsdl:operation name=\"GetAtoms\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      element </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomsSoapIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomsSoapOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicWeight\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic wieght by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicWeightSoapIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicWeightSoapOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicNumber\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic Number by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicNumberSoapIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicNumberSoapOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetElementSymbol\">\r\n      <wsdl:documentation
+      xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get atomic symbol by element
+      name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetElementSymbolSoapIn\"
+      />\r\n      <wsdl:output message=\"tns:GetElementSymbolSoapOut\" />\r\n    </wsdl:operation>\r\n
+      \ </wsdl:portType>\r\n  <wsdl:portType name=\"periodictableHttpGet\">\r\n    <wsdl:operation
+      name=\"GetAtoms\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      element </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomsHttpGetIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomsHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicWeight\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic wieght by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicWeightHttpGetIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicWeightHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicNumber\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic Number by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicNumberHttpGetIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicNumberHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetElementSymbol\">\r\n      <wsdl:documentation
+      xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get atomic symbol by element
+      name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetElementSymbolHttpGetIn\"
+      />\r\n      <wsdl:output message=\"tns:GetElementSymbolHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+      \ </wsdl:portType>\r\n  <wsdl:portType name=\"periodictableHttpPost\">\r\n    <wsdl:operation
+      name=\"GetAtoms\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      element </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomsHttpPostIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomsHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicWeight\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic wieght by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicWeightHttpPostIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicWeightHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicNumber\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get
+      atomic Number by element name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAtomicNumberHttpPostIn\"
+      />\r\n      <wsdl:output message=\"tns:GetAtomicNumberHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetElementSymbol\">\r\n      <wsdl:documentation
+      xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get atomic symbol by element
+      name </wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetElementSymbolHttpPostIn\"
+      />\r\n      <wsdl:output message=\"tns:GetElementSymbolHttpPostOut\" />\r\n
+      \   </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"periodictableSoap\"
+      type=\"tns:periodictableSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+      />\r\n    <wsdl:operation name=\"GetAtoms\">\r\n      <soap:operation soapAction=\"http://www.webserviceX.NET/GetAtoms\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicWeight\">\r\n
+      \     <soap:operation soapAction=\"http://www.webserviceX.NET/GetAtomicWeight\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicNumber\">\r\n
+      \     <soap:operation soapAction=\"http://www.webserviceX.NET/GetAtomicNumber\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetElementSymbol\">\r\n
+      \     <soap:operation soapAction=\"http://www.webserviceX.NET/GetElementSymbol\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+      \ <wsdl:binding name=\"periodictableSoap12\" type=\"tns:periodictableSoap\">\r\n
+      \   <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+      \   <wsdl:operation name=\"GetAtoms\">\r\n      <soap12:operation soapAction=\"http://www.webserviceX.NET/GetAtoms\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicWeight\">\r\n
+      \     <soap12:operation soapAction=\"http://www.webserviceX.NET/GetAtomicWeight\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicNumber\">\r\n
+      \     <soap12:operation soapAction=\"http://www.webserviceX.NET/GetAtomicNumber\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetElementSymbol\">\r\n
+      \     <soap12:operation soapAction=\"http://www.webserviceX.NET/GetElementSymbol\"
+      style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+      \ <wsdl:binding name=\"periodictableHttpGet\" type=\"tns:periodictableHttpGet\">\r\n
+      \   <http:binding verb=\"GET\" />\r\n    <wsdl:operation name=\"GetAtoms\">\r\n
+      \     <http:operation location=\"/GetAtoms\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml part=\"Body\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicWeight\">\r\n
+      \     <http:operation location=\"/GetAtomicWeight\" />\r\n      <wsdl:input>\r\n
+      \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+      \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicNumber\">\r\n      <http:operation location=\"/GetAtomicNumber\"
+      />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+      \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+      \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetElementSymbol\">\r\n
+      \     <http:operation location=\"/GetElementSymbol\" />\r\n      <wsdl:input>\r\n
+      \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+      \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+      \ </wsdl:binding>\r\n  <wsdl:binding name=\"periodictableHttpPost\" type=\"tns:periodictableHttpPost\">\r\n
+      \   <http:binding verb=\"POST\" />\r\n    <wsdl:operation name=\"GetAtoms\">\r\n
+      \     <http:operation location=\"/GetAtoms\" />\r\n      <wsdl:input>\r\n        <mime:content
+      type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+      \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+      \   <wsdl:operation name=\"GetAtomicWeight\">\r\n      <http:operation location=\"/GetAtomicWeight\"
+      />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+      />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml part=\"Body\"
+      />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAtomicNumber\">\r\n
+      \     <http:operation location=\"/GetAtomicNumber\" />\r\n      <wsdl:input>\r\n
+      \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+      \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+      \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetElementSymbol\">\r\n
+      \     <http:operation location=\"/GetElementSymbol\" />\r\n      <wsdl:input>\r\n
+      \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+      \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+      \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"periodictable\">\r\n
+      \   <wsdl:port name=\"periodictableSoap\" binding=\"tns:periodictableSoap\">\r\n
+      \     <soap:address location=\"http://www.webservicex.net/periodictable.asmx\"
+      />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"periodictableSoap12\" binding=\"tns:periodictableSoap12\">\r\n
+      \     <soap12:address location=\"http://www.webservicex.net/periodictable.asmx\"
+      />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"periodictableHttpGet\" binding=\"tns:periodictableHttpGet\">\r\n
+      \     <http:address location=\"http://www.webservicex.net/periodictable.asmx\"
+      />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"periodictableHttpPost\" binding=\"tns:periodictableHttpPost\">\r\n
+      \     <http:address location=\"http://www.webservicex.net/periodictable.asmx\"
+      />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://www.webservicex.net:80/periodictable.asmx
+    body: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://www.webserviceX.NET"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://www.webserviceX.NET"><env:Body><ins0:GetAtomicNumber><ins0:ElementName>oxygen</ins0:ElementName></ins0:GetAtomicNumber></env:Body></env:Envelope>
+    headers:
+      soapaction:
+      - ! '"http://www.webserviceX.NET/GetAtomicNumber"'
+      content-type:
+      - text/xml;charset=UTF-8
+      content-length:
+      - '409'
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private, max-age=0
+      content-length:
+      - '960'
+      content-type:
+      - text/xml; charset=utf-8
+      server:
+      - Microsoft-IIS/7.0
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      date:
+      - Thu, 01 Mar 2012 00:29:11 GMT
+    body: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><GetAtomicNumberResponse
+      xmlns=\"http://www.webserviceX.NET\"><GetAtomicNumberResult>&lt;NewDataSet&gt;\r\n
+      \ &lt;Table&gt;\r\n    &lt;AtomicNumber&gt;8&lt;/AtomicNumber&gt;\r\n    &lt;ElementName&gt;Oxygen&lt;/ElementName&gt;\r\n
+      \   &lt;Symbol&gt;O&lt;/Symbol&gt;\r\n    &lt;AtomicWeight&gt;15.9994&lt;/AtomicWeight&gt;\r\n
+      \   &lt;BoilingPoint&gt;90.2&lt;/BoilingPoint&gt;\r\n    &lt;IonisationPotential&gt;13.61&lt;/IonisationPotential&gt;\r\n
+      \   &lt;EletroNegativity&gt;3.5&lt;/EletroNegativity&gt;\r\n    &lt;AtomicRadius&gt;0.74&lt;/AtomicRadius&gt;\r\n
+      \   &lt;MeltingPoint&gt;55&lt;/MeltingPoint&gt;\r\n    &lt;Density&gt;1.3318&lt;/Density&gt;\r\n
+      \ &lt;/Table&gt;\r\n&lt;/NewDataSet&gt;</GetAtomicNumberResult></GetAtomicNumberResponse></soap:Body></soap:Envelope>"
+    http_version: '1.1'

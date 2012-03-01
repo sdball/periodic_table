@@ -25,7 +25,7 @@ module PeriodicTable
                 :element_name,
                 :boiling_point,
                 :ionisation_potential,
-                :electro_negativity,
+                :electronegativity,
                 :atomic_radius,
                 :melting_point,
                 :density
@@ -38,7 +38,7 @@ module PeriodicTable
       @element_name = xml.at('ElementName').text
       @boiling_point = xml.at('BoilingPoint').text
       @ionisation_potential = xml.at('IonisationPotential').text
-      @electro_negativity = xml.at('EletroNegativity').text
+      @electronegativity = xml.at('EletroNegativity').text
       @atomic_radius = xml.at('AtomicRadius').text
       @melting_point = xml.at('MeltingPoint').text
       @density = xml.at('Density').text

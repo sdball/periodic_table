@@ -1,4 +1,4 @@
-# Periodic Table
+# Periodic Table [![Build Status](https://secure.travis-ci.org/sdball/periodic_table.png?branch=master)](http://travis-ci.org/sdball/periodic_table)
 
 ## Installation
 

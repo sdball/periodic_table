@@ -17,7 +17,6 @@ module PeriodicTable
     end
   end
 
-  # Wow, this is ugly. I did not expect nested XML.
   class ApiResponse
     def initialize(result)
       xml = Nokogiri::XML.parse(result)

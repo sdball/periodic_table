@@ -3,15 +3,13 @@ require 'savon'
 module PeriodicTable
   class PeriodicTableApi
     def initialize
-      @client = Savon::Client.new do
-        wsdl.document = 'http://www.webservicex.net/periodictable.asmx?WSDL'
+      @client = Savon.client do
+        wsdl 'http://www.webservicex.net/periodictable.asmx?WSDL'
       end
     end
 
     def query(element_name)
-      api_response = @client.request :get_atomic_number do
-        soap.body = {'ElementName' => element_name}
-      end
+      api_response = @client.call :get_atomic_number, :message => {'ElementName' => element_name}
       result = api_response.to_hash[:get_atomic_number_response][:get_atomic_number_result]
       ApiResponse.new(result)
     end
